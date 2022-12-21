@@ -10,4 +10,5 @@ inline fun AppCompatActivity.viewBinding() {}
 inline fun <T : ViewBinding> AppCompatActivity.viewBinding(crossinline factory: (LayoutInflater) -> T) =
     lazy(LazyThreadSafetyMode.NONE) {
         factory(layoutInflater)
+        // todo: Нужно разобраться и сделать
     }
