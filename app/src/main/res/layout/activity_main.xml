@@ -27,7 +27,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/secondContainer"
-        android:name="com.viewbindingsample.ui.fragment.FragmentTest"
+        android:name="com.viewbindingsample.ui.fragment.BindFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="32dp"

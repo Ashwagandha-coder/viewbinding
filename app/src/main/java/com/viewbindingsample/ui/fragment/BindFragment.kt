@@ -5,9 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.viewbindingsample.R
+import com.viewbindingsample.databinding.FragmentTestBinding
 
 
 class BindFragment: Fragment() {
+
+    private lateinit var binding: FragmentTestBinding
 
 
     override fun onCreateView(
@@ -15,11 +19,20 @@ class BindFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
+        binding = FragmentTestBinding.inflate(inflater,container,false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        bind()
+    }
+
+
+    private fun bind() {
+
+        binding.tvMain.text = getString(R.string.hello_second_fragment)
+
     }
 
 }
