@@ -29,6 +29,8 @@ class BindFragment: Fragment() {
     }
 
 
+
+
     private fun bind() {
 
         binding.tvMain.text = getString(R.string.hello_second_fragment)
